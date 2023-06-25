@@ -1,0 +1,9 @@
+.card .frontCard {
+  transform: rotateY(90deg);
+  position: absolute;
+}
+
+.card:hover .frontCard {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
