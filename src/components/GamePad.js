@@ -4,12 +4,14 @@ import HomeButton from "./HomeButton";
 import MemoryGame from "./MemoryGame";
 import DifficultyLevel from "./DifficultyLevel";
 import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
+import "./GamePad.css";
 
 function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
   const [isVisible, setToVisible] = useState(false);
 
   const [curDifficulty, setCurDifficulty] = useState(0);
   const [counter, setCounter] = useState(0);
+  const [rCounter, setRCounter] = useState(0);
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
 
@@ -31,22 +33,63 @@ function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
     playTargetCards(target);
     setTargetCards(target);
     setCurDifficulty(difficulty);
+    setRCounter(difficulty - 1);
   };
 
   const handleChoice = (card) => {
-    if (targetCards[counter].id === card.id) {
-      if (counter < curDifficulty - 1) {
-        correctChoice();
-        setCounter(counter + 1);
-      } else {
-        correctChoice();
-        setCounter(0);
-        createTargetList(curDifficulty);
-        shuffleCards();
-      }
-    } else {
-      wrongChoice(targetCards);
-      setCounter(0);
+    switch (gameName) {
+      case "numbers":
+        if (targetCards[counter].id + 1 === card.id) {
+          if (counter < curDifficulty - 1) {
+            correctChoice();
+            setCounter(counter + 1);
+          } else {
+            correctChoice();
+            setCounter(0);
+            createTargetList(curDifficulty);
+            shuffleCards();
+          }
+        } else {
+          wrongChoice(targetCards);
+          setCounter(0);
+        }
+
+        break;
+
+      case "reverseOrder":
+        if (targetCards[rCounter].id === card.id) {
+          if (rCounter > 0) {
+            correctChoice();
+            setRCounter(rCounter - 1);
+          } else {
+            correctChoice();
+            setRCounter(curDifficulty - 1);
+            createTargetList(curDifficulty);
+            shuffleCards();
+          }
+        } else {
+          wrongChoice(targetCards);
+          setRCounter(curDifficulty - 1);
+        }
+
+        break;
+
+      default:
+        if (targetCards[counter].id === card.id) {
+          if (counter < curDifficulty - 1) {
+            correctChoice();
+            setCounter(counter + 1);
+          } else {
+            correctChoice();
+            setCounter(0);
+            createTargetList(curDifficulty);
+            shuffleCards();
+          }
+        } else {
+          wrongChoice(targetCards);
+          setCounter(0);
+        }
+        break;
     }
   };
 

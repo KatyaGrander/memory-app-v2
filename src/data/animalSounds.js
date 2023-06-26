@@ -1,4 +1,5 @@
-export const animalSounds = [
+function AnimalSounds() {
+  const animalSounds = [
     { id: "dog", src: "./sounds/dog.mp3" },
     { id: "cat", src: "./sounds/cat.mp3" },
     { id: "horse", src: "./sounds/horse.mp3" },
@@ -9,3 +10,7 @@ export const animalSounds = [
     { id: "snake", src: "./sounds/snake.mp3" },
     { id: "butterfly", src: "./sounds/butterfly.mp3" },
   ];
+  return animalSounds;
+}
+
+export default AnimalSounds;

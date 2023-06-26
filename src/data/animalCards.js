@@ -1,5 +1,5 @@
-function AnimalsCards() {
-  const animalsCards = [
+function AnimalCards() {
+  const animalCards = [
     { id: "dog", src: "/img/dog.jpeg" },
     { id: "cat", src: "/img/cat.jpeg" },
     { id: "horse", src: "/img/horse.jpeg" },
@@ -11,7 +11,7 @@ function AnimalsCards() {
     { id: "butterfly", src: "/img/butterfly.jpeg" },
   ];
 
-  return animalsCards;
+  return animalCards;
 }
 
-export default AnimalsCards;
+export default AnimalCards;

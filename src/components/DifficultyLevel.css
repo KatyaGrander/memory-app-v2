@@ -23,7 +23,7 @@ label {
 }
 
 .lvlBtnBox {
-  position: relative;
+  text-align: center;
   background-color: #7b9e89;
   width: 30%;
   padding: 0 0 3em 0;
@@ -32,8 +32,6 @@ label {
   border-radius: 15px;
   margin-bottom: 1em;
 }
-
-
 
 .playBtn {
   position: absolute;
@@ -47,7 +45,6 @@ label {
   background-color: #008000;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 .playBtn:hover {
   background-color: #ee9b00;

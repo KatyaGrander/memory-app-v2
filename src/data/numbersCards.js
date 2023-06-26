@@ -1,6 +1,4 @@
-
-
-function NumbersCards () {
+function NumbersCards() {
   const numbersCards = [
     { id: 1, src: "./img/one.jpeg" },
     { id: 2, src: "./img/two.jpeg" },
@@ -16,9 +14,6 @@ function NumbersCards () {
   return numbersCards;
 }
 
-
-
 export default NumbersCards;
-
 
 

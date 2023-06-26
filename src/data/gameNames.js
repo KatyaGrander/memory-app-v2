@@ -1,9 +1,9 @@
 export const gameNames = [
   { name: "numbers" },
-  { name: "objectMatch" },
-  { name: "colorMatch" },
+  { name: "objects" },
+  { name: "colors" },
   { name: "opposites" },
-  { name: "animals" },
+  { name: "animal" },
   { name: "objectsFamily" },
   { name: "reverseOrder" },
 ];

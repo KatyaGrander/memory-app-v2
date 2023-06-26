@@ -7,7 +7,6 @@ export const playTargetCards = (target) => {
     setTimeout(() => audio.play(), 2000 * i);
   }
   clearTimeout();
-  console.log("play");
 };
 
 export const wrongChoice = (targetCards) => {
@@ -17,5 +16,5 @@ export const wrongChoice = (targetCards) => {
 
 export const correctChoice = () => {
   correctChoiceSound.play();
-  
 };
+

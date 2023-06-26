@@ -11,6 +11,6 @@ function ReverseOrderSounds() {
     { id: "butterfly", src: "./sounds/butterfly.mp3" },
   ];
 
-  return reverseOrderSounds();
+  return reverseOrderSounds;
 }
 export default ReverseOrderSounds;
