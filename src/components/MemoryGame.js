@@ -21,7 +21,8 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
 
       {gameName === "numbers" ||
       gameName === "opposites" ||
-      gameName === "reverseOrder" ? (
+      gameName === "reverseOrder" ||
+      gameName === "objectsFamily" ? (
         <div className="cardGrid">
           {cards.map((card) => (
             <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
@@ -43,6 +44,8 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
           </div>
         </div>
       ) : null}
+
+      {gameName === "objects" ? (<div>TBD - needs proper design first </div>):null}
     </>
   );
 }

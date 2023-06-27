@@ -1,18 +1,18 @@
-function ObjectsCards() {
-    const objectsCards = [
-      { id: "dog", src: "/img/dog.jpeg" },
-      { id: "cat", src: "/img/cat.jpeg" },
-      { id: "horse", src: "/img/horse.jpeg" },
-      { id: "fish", src: "/img/fish.jpeg" },
-      { id: "elephant", src: "/img/elephant.jpeg" },
-      { id: "swan", src: "/img/swan.jpeg" },
-      { id: "monkey", src: "/img/monkey.jpeg" },
-      { id: "snake", src: "/img/snake.jpeg" },
-      { id: "butterfly", src: "/img/butterfly.jpeg" },
+function ColorsCards() {
+    const colorsCards = [
+      { id: "bug", src: "/img/red.jpeg" },
+      { id: "frog", src: "/img/green.jpeg" },
+      { id: "butterfly", src: "/img/blue.jpeg" },
+      { id: "elephant", src: "/img/gray.jpeg" },
+      { id: "dog", src: "/img/brown.jpeg" },
+      { id: "fish", src: "/img/pink.jpeg" },
+      { id: "cat", src: "/img/black.jpeg" },
+      { id: "chicken", src: "/img/yellow.jpeg" },
+      { id: "swan", src: "/img/white.jpeg" },
     ];
   
-    return objectsCards;
+    return colorsCards;
   }
   
-  export default ObjectsCards;
+  export default ColorsCards;
   

@@ -1,16 +1,16 @@
-function ColorSounds() {
-    const colorSounds = [
-      { id: "dog", src: "./sounds/dog.mp3" },
-      { id: "cat", src: "./sounds/cat.mp3" },
-      { id: "horse", src: "./sounds/horse.mp3" },
-      { id: "fish", src: "./sounds/fish.mp3" },
-      { id: "elephant", src: "./sounds/elephant.mp3" },
-      { id: "swan", src: "./sounds/swan.mp3" },
-      { id: "monkey", src: "./sounds/monkey.mp3" },
-      { id: "snake", src: "./sounds/snake.mp3" },
-      { id: "butterfly", src: "./sounds/butterfly.mp3" },
+function ColorsSounds() {
+    const colorsSounds = [
+        { id: "bug", src: "/sounds/bug.mp3" },
+        { id: "frog", src: "/sounds/frog.mp3" },
+        { id: "butterfly", src: "/sounds/butterfly.mp3" },
+        { id: "elephant", src: "/sounds/elephant.mp3" },
+        { id: "dog", src: "/sounds/dog.mp3" },
+        { id: "fish", src: "/sounds/fish.mp3" },
+        { id: "cat", src: "/sounds/cat.mp3" },
+        { id: "chicken", src: "/sounds/chicken.mp3" },
+        { id: "swan", src: "/sounds/swan.mp3" },
     ];
-    return colorSounds;
+    return colorsSounds;
   }
   
-  export default ColorSounds;
+  export default ColorsSounds;
