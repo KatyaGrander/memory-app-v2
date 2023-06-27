@@ -1,6 +1,7 @@
 import React from "react";
 
 import SingleAnimalCard from "./SingleAnimalCard";
+import SingleOppositesCard from "./SingleOppositesCard";
 import SingleCard from "./SingleCard";
 import "./MemoryGame.css";
 
@@ -20,7 +21,6 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
       ) : null}
 
       {gameName === "numbers" ||
-      gameName === "opposites" ||
       gameName === "reverseOrder" ||
       gameName === "objectsFamily" ? (
         <div className="cardGrid">
@@ -30,9 +30,25 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
         </div>
       ) : null}
 
+      {gameName === "opposites" ? (
+        <div className="cardGrid">
+          {cards.map((card) => (
+            <SingleOppositesCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+            />
+          ))}
+        </div>
+      ) : null}
+
       {gameName === "colors" ? (
         <div gameName="colorsGameGrid">
-          <img className="colorsImage" src="./img/colorsGameImage.png" alt="תמונת חיות צבעוניות" />
+          <img
+            className="colorsImage"
+            src="./img/colorsGameImage.png"
+            alt="תמונת חיות צבעוניות"
+          />
           <div className="cardGridColors">
             {cards.map((card) => (
               <SingleCard
@@ -45,7 +61,9 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
         </div>
       ) : null}
 
-      {gameName === "objects" ? (<div>TBD - needs proper design first </div>):null}
+      {gameName === "objects" ? (
+        <div>TBD - needs proper design first </div>
+      ) : null}
     </>
   );
 }
