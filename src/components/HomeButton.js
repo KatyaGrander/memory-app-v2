@@ -1,5 +1,5 @@
 import React from "react";
-//import "./HomeButton.css"
+import "./HomeButton.css"
 
 function HomeButton({makeVisible}) {
 

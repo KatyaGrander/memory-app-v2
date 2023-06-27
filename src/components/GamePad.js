@@ -95,7 +95,6 @@ function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
 
   return (
     <>
-      <p>{gameName}</p>
       <HomeButton makeVisible={makeVisible} />
       <DifficultyLevel
         createTargetList={createTargetList}
@@ -111,16 +110,3 @@ function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
   );
 }
 export default GamePad;
-
-/*  const CurrentGame = require("./" + gameName).default;
-
-  return (
-    <div>
-      <div>
-        <HomeButton makeVisible={makeVisible} />
-      </div>
-
-      <CurrentGame />
-    </div>
-  );
-}*/

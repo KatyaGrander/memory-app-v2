@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import GamePickButton from "./GamePickButton";
 import { gameNames } from "../data/gameNames";
+import "./GamePickButtonGrid.css"
 
 function GamePickButtonGrid({ isButtonGridVisible, setGameName, setCardType, setSoundType }) {
   const [isVisible, setToVisible] = useState(false);
@@ -15,7 +16,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName, setCardType, set
     <>
       <div className="App gameBtnGrid">
         <GamePickButton
-          buttonText={"משחק המספרים"}
+          buttonText={"זכרו את המספרים"}
           makeVisible={makeVisible}
           gameName={gameNames[0].name}
           setGameName={setGameName}
@@ -23,7 +24,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName, setCardType, set
           setSoundType={setSoundType}
         ></GamePickButton>
         <GamePickButton
-          buttonText={"התאימו חפצים"}
+          buttonText={"התאימו את החפצים"}
           makeVisible={makeVisible}
           gameName={gameNames[1].name}
           setGameName={setGameName}
@@ -47,7 +48,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName, setCardType, set
           setSoundType={setSoundType}
         ></GamePickButton>
         <GamePickButton
-          buttonText={"מצאו את החיה"}
+          buttonText={"מצאו את החיה המסתתרת"}
           makeVisible={makeVisible}
           gameName={gameNames[4].name}
           setGameName={setGameName}
@@ -55,7 +56,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName, setCardType, set
           setSoundType={setSoundType}
         ></GamePickButton>
         <GamePickButton
-          buttonText={"התאימו למשפחה"}
+          buttonText={"התאימו מילים למשפחה"}
           makeVisible={makeVisible}
           gameName={gameNames[5].name}
           setGameName={setGameName}
@@ -63,7 +64,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName, setCardType, set
           setSoundType={setSoundType}
         ></GamePickButton>
         <GamePickButton
-          buttonText={"זכרו בסדר הפוך"}
+          buttonText={"זכרו מילים בסדר הפוך"}
           makeVisible={makeVisible}
           gameName={gameNames[6].name}
           setGameName={setGameName}

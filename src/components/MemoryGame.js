@@ -31,9 +31,9 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
       ) : null}
 
       {gameName === "colors" ? (
-        <div>
-          <img src="./img/colorsGameImage.png" alt="תמונת חיות צבעוניות" />
-          <div className="cardGrid">
+        <div gameName="colorsGameGrid">
+          <img className="colorsImage" src="./img/colorsGameImage.png" alt="תמונת חיות צבעוניות" />
+          <div className="cardGridColors">
             {cards.map((card) => (
               <SingleCard
                 key={card.id}
