@@ -5,6 +5,7 @@ import SingleOppositesCard from "./SingleOppositesCard";
 import SingleCard from "./SingleCard";
 import "./MemoryGame.css";
 
+
 export default function MemoryGame({ gameName, cards, handleChoice }) {
   return (
     <>
@@ -43,7 +44,7 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
       ) : null}
 
       {gameName === "colors" ? (
-        <div gameName="colorsGameGrid">
+        <div className="colorsGameGrid">
           <img
             className="colorsImage"
             src="./img/colorsGameImage.png"

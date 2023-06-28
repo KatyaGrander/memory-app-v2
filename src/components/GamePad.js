@@ -3,7 +3,7 @@ import { useState } from "react";
 import HomeButton from "./HomeButton";
 import MemoryGame from "./MemoryGame";
 import DifficultyLevel from "./DifficultyLevel";
-import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
+import { correctChoice, wrongChoice, playTargetCards, setText } from "./Utils";
 import "./GamePad.css";
 
 function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
@@ -95,12 +95,14 @@ function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
 
   return (
     <>
+      <h1>{setText(gameName)}</h1>
       <HomeButton makeVisible={makeVisible} />
       <DifficultyLevel
         createTargetList={createTargetList}
         shuffleCards={shuffleCards}
         gameCards={cardType}
       />
+
       <MemoryGame
         gameName={gameName}
         cards={cards}
