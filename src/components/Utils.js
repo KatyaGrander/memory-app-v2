@@ -3,17 +3,10 @@ import { gameDescribtion } from "../data/gameDescribtion";
 const wrongChoiceSound = new Audio("./sounds/failure.mp3");
 const correctChoiceSound = new Audio("./sounds/success.mp3");
 
-export const playTargetCards = (target) => {
-  for (let i = 0; i < target.length; i++) {
-    const audio = new Audio(target[i].src);
-    setTimeout(() => audio.play(), 2000 * i);
-  }
-  clearTimeout();
-};
 
-export const wrongChoice = (targetCards) => {
+export const wrongChoice = () => {
   wrongChoiceSound.play();
-  playTargetCards(targetCards);
+ // playTargetCards(targetCards);
 };
 
 export const correctChoice = () => {

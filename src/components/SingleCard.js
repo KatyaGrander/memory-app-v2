@@ -18,3 +18,5 @@ function SingleCard({ card, handleChoice }) {
 }
 
 export default SingleCard;
+
+

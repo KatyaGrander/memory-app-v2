@@ -1,5 +1,5 @@
 import React from "react";
-import "./GamePickButton.css";
+import "./GamePickButton.css"
 
 function GamePickButton({
   buttonText,

@@ -1,0 +1,15 @@
+.lvlBtn {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ec9f05;
+  border-radius: 30px;
+  border: 0;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: fit-content;
+}
+.lvlBtn:hover {
+  cursor: pointer;
+  background-color: #023047;
+}

@@ -6,7 +6,7 @@ import SingleCard from "./SingleCard";
 import "./MemoryGame.css";
 
 
-export default function MemoryGame({ gameName, cards, handleChoice }) {
+export default function MemoryGame({ gameName, cards, handleChoice, isDisabled }) {
   return (
     <>
       {gameName === "animal" ? (
@@ -26,7 +26,7 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
       gameName === "objectsFamily" ? (
         <div className="cardGrid">
           {cards.map((card) => (
-            <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
+            <SingleCard key={card.id} card={card} handleChoice={handleChoice} isDisabled={isDisabled} />
           ))}
         </div>
       ) : null}
@@ -38,6 +38,7 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
               key={card.id}
               card={card}
               handleChoice={handleChoice}
+              isDisabled={isDisabled}
             />
           ))}
         </div>
@@ -56,6 +57,7 @@ export default function MemoryGame({ gameName, cards, handleChoice }) {
                 key={card.id}
                 card={card}
                 handleChoice={handleChoice}
+                isDisabled={isDisabled}
               />
             ))}
           </div>

@@ -1,15 +1,10 @@
 import React from "react";
 import "./HomeButton.css";
 
-function HomeButton({ makeVisible, muteAll }) {
+function HomeButton({ makeVisible, isDisabled }) {
   return (
     <>
-      <button
-        className="homeBtn"
-        onClick={() => {
-          makeVisible();
-        }}
-      >
+      <button className="homeBtn" onClick={isDisabled ? null : makeVisible}>
         <img src="/img/homeButton.png" alt="חזרה לתפריט" />
       </button>
     </>
