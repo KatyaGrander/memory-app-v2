@@ -3,7 +3,7 @@ import { useState } from "react";
 import HomeButton from "./HomeButton";
 import MemoryGame from "./MemoryGame";
 import DifficultyLevel from "./DifficultyLevel";
-import { correctChoice, wrongChoice, setText } from "./Utils";
+import { correctChoice, wrongChoice, setText, setAbout } from "./Utils";
 import "./GamePad.css";
 import LevelsButton from "./LevelsButton";
 
@@ -124,6 +124,7 @@ function GamePad({ isButtonGridVisible, gameName, cardType, soundType }) {
       <h1>{setText(gameName)}</h1>
       <HomeButton makeVisible={isButtonGridVisible} isDisabled={isDisabled} />
       <LevelsButton makeLevelsVisible={isLevelsVisible}/>
+      <p className="aboutGame">{setAbout(gameName)}</p>
       <MemoryGame
         gameName={gameName}
         cards={cards}

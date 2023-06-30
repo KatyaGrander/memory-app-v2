@@ -5,10 +5,12 @@ import SingleOppositesCard from "./SingleOppositesCard";
 import SingleCard from "./SingleCard";
 import "./MemoryGame.css";
 
-
 export default function MemoryGame({ gameName, cards, handleChoice, isDisabled }) {
+ 
+  
   return (
     <>
+
       {gameName === "animal" ? (
         <div className="cardGrid">
           {cards.map((card) => (

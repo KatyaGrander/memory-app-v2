@@ -3,10 +3,9 @@ import { gameDescribtion } from "../data/gameDescribtion";
 const wrongChoiceSound = new Audio("./sounds/failure.mp3");
 const correctChoiceSound = new Audio("./sounds/success.mp3");
 
-
 export const wrongChoice = () => {
   wrongChoiceSound.play();
- // playTargetCards(targetCards);
+  // playTargetCards(targetCards);
 };
 
 export const correctChoice = () => {
@@ -14,8 +13,15 @@ export const correctChoice = () => {
 };
 
 export const setText = (textID) => {
-  const text = gameDescribtion.find((obj) => {
+  const curGametext = gameDescribtion.find((obj) => {
     return obj.id === textID;
   });
-  return text.text;
+  return curGametext.text;
+};
+
+export const setAbout = (textID) => {
+  const curGameInfo = gameDescribtion.find((obj) => {
+    return obj.id === textID;
+  });
+return curGameInfo.about;
 };

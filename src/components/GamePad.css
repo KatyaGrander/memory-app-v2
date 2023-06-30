@@ -1,4 +1,9 @@
 .GamePad {
-    margin: auto;
-    
+  margin: auto;
+}
+
+.aboutGame {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
 }
